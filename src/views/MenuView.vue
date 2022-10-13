@@ -17,9 +17,9 @@
       </div>
       <div @click="allOrChoices = !allOrChoices" 
           class="d-flex">
-        <button :style="[allOrChoices ? {'opacity': '.1'} : {'opacity': '.6'}]" 
+        <button :class="{ buttonClickedIn: allOrChoices }" 
                 @click="mainCategory" 
-                class="rounded-pill shadow-lg bg-transparent d-block-flex fixed-top m-5 p-2 fw-bold" 
+                class="hoverclickable rounded-pill bg-transparent d-block-flex fixed-top m-5 p-2 fw-bold" 
                 style="border-top: 2px solid silver;margin:auto; border-right: 2px solid silver">
                 {{ allCategory }}
         </button>
@@ -99,7 +99,7 @@
           <h4 class="card-text">
            {{ item.desc }}
           </h4>
-       </div>
+        </div>
       </div>
     </div>
   </template>
@@ -734,6 +734,21 @@ selectedCategory: "All"}
 </script>
 
 <style>
+.hoverclickable {
+  background: #ffffff;
+  border: 1px solid rgb(216, 216, 216);
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.buttonClickedIn {
+  color: #272727;
+  text-shadow: -1px -1px 0px rgb(255, 255, 255), -1px -1px 0px rgb(255, 255, 255);
+  box-shadow: inset 1px 1px 4px rgb(0, 0, 0);
+  transform: translateY(1px);
+}
+
     .scrollingtext {
      height: 100px;	
      overflow: hidden;

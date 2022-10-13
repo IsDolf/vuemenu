@@ -3,8 +3,8 @@
     <div class="p-3 display-4 shadow">
       <p @click="showWhereToFindUs = !showWhereToFindUs" 
          style="border-bottom: 3px solid silver" 
-         :style="[showWhereToFindUs ? {'opacity': '.3'} : {'opacity': '1'}]" 
-         class="hoverclickable shadow text-center rounded-pill">
+         class="hoverclickable shadow-inner text-center rounded-pill"
+         :class="{ buttonClickedIn: showWhereToFindUs }">
          Where to find us?
       </p>
         <div v-if="showWhereToFindUs">
@@ -20,8 +20,8 @@
         </div>
         <div v-else @click="displayWorkingHours"
           style="border-bottom: 3px solid silver;" 
-          class="hoverclickable shadow text-center rounded-pill"
-          :style="[OpenOrNot ? {'opacity': '.5'} : {'opacity': '1'}]">
+          class="hoverclickable shadow-inner text-center rounded-pill"
+          :class="{ buttonClickedIn: OpenOrNot }">
             Working hours?
         </div>
         <div v-if="OpenOrNot" @click="OpenOrNot = !OpenOrNot">
@@ -90,8 +90,8 @@
     {{ quotes[0] }}
     </p>
   </div>
+  <br><br><br><br><br><br><br><br><br><br>
 </template>
-
 <script>
 
 
@@ -136,7 +136,18 @@ displayWorkingHours() {
 </script>
 
 <style scoped>
-  .hoverclickable:hover {
-    cursor: pointer;
+.hoverclickable {
+  background: #ffffff;
+  border: 1px solid rgb(216, 216, 216);
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
 }
+.buttonClickedIn {
+  color: #272727;
+  text-shadow: -1px -1px 0px rgb(255, 255, 255), -1px -1px 0px rgb(255, 255, 255);
+  box-shadow: inset 1px 1px 4px rgb(0, 0, 0);
+  transform: translateY(1px);
+}
+
 </style>
