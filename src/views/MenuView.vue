@@ -16,56 +16,50 @@
         </h3>
       </div>
       <div @click="allOrChoices = !allOrChoices" 
-          class="d-flex">
+           class="d-flex">
         <button :class="{ buttonClickedIn: allOrChoices }" 
                 @click="mainCategory" 
-                class="hoverclickable rounded-pill bg-transparent d-block-flex fixed-top m-5 p-2 fw-bold" 
-                style="border-top: 2px solid silver;margin:auto; border-right: 2px solid silver">
+                class="hoverclickable border rounded-pill bg-transparent d-block-flex fixed-top m-5 p-2 fw-bold">
                 {{ allCategory }}
         </button>
 
       </div>
-      <div class="d-inline-flex rounded-pill containerbtn-group btn-group-lg" 
+      <div class="d-inline-flex rounded-pill border w-100 fixed-top btn-group-lg justify-content-between" 
           role="group" 
           style="margin:auto">
         <div v-show="allOrChoices" 
              @click="TopliNapitciCategory">
           <button @click="selectedCategory = 'TopliNapitci'" 
-                  class="text-center rounded shadow-lg bg-light btn btn-lg d-flex m-1" 
-                  style="margin:auto;border-top: 2px solid silver; border-right: 2px solid silver">
+                  class="text-center border rounded-pill shadow-lg bg-light btn btn-lg" >
             <fa icon="fa-coffee" />
           </button>
         </div>
         <div v-show="allOrChoices" 
              @click="juicesCategory">
           <button @click="selectedCategory = 'Juices'" 
-                  class="text-center rounded shadow-lg bg-light btn btn-lg d-flex m-1" 
-                  style="margin:auto;border-top: 2px solid silver; border-right: 2px solid silver">
+                  class="text-center border rounded shadow-lg bg-light btn btn-lg" >
             <fa icon="fa-lemon" />
           </button>
         </div>
         <div v-show="allOrChoices" 
              @click="sodaCategory">
           <button @click="selectedCategory = 'Soda'" 
-                  class="text-center rounded shadow-lg bg-light btn btn-lg d-flex m-1" 
-                  style="margin:auto;border-top: 2px solid silver; border-right: 2px solid silver">
+                  class="text-center border rounded-pill shadow-lg bg-light btn btn-lg" >
             <fa icon="fa-cubes-stacked" />
           </button>
         </div>
         <div v-show="allOrChoices" 
              @click="beerCategory">
           <button @click="selectedCategory = 'Beers'" 
-                  class="text-center rounded shadow-lg bg-light btn btn-lg d-flex m-1" 
-                  style="margin:auto;border-top: 2px solid silver; border-right: 2px solid silver">
+                  class="text-center border rounded shadow-lg bg-light btn btn-lg" >
             <fa icon="fa-beer" />
           </button>
         </div>
         <div v-show="allOrChoices" 
              @click="alcoholCategory">
           <button @click="selectedCategory = 'Alcohol'" 
-                  class="text-center rounded shadow-lg bg-light btn btn-lg d-flex m-1" 
-                  style="margin:auto;border-top: 2px solid silver; border-right: 2px solid silver">
-            <fa icon="fa-solid fa-wine-glass" />
+                  class="text-center border rounded-pill shadow-lg bg-light btn btn-lg" >
+            <fa icon="fa-wine-glass" />
           </button>
         </div>
       </div>
