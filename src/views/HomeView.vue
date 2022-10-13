@@ -80,12 +80,10 @@
       </p>
     </div>
     <div>
-      <video autoplay muted loop id="myVideo" 
+        <img src="../assets/coffeegif.gif"
+             alt="coffee gif"
              class="container-fluid rounded-pill p-2 shadow-lg" 
-             style="z-index: 1; margin-bottom: 7%">
-          <source src="../assets/video.mp4" 
-             type="video/mp4">
-      </video>
+             style="max-width:450px;;z-index: 1; margin-bottom: 7%">
     </div>
     <p v-show="!showWhereToFindUs && !OpenOrNot" 
     class="display-4 d-md-none">
