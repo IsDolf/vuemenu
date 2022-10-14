@@ -1,9 +1,8 @@
 <template>
   <div class="home">
     <div class="p-3 display-4 shadow">
-      <p @click="showWhereToFindUs = !showWhereToFindUs" 
-         style="border-bottom: 3px solid silver" 
-         class="hoverclickable shadow-inner text-center rounded-pill"
+      <p @click="showWhereToFindUs = !showWhereToFindUs"
+         class="borderstyle hoverclickable shadow-inner text-center rounded-pill"
          :class="{ buttonClickedIn: showWhereToFindUs }">
          Where to find us?
       </p>
@@ -18,15 +17,13 @@
              referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
-        <div v-else @click="displayWorkingHours"
-          style="border-bottom: 3px solid silver;" 
-          class="hoverclickable shadow-inner text-center rounded-pill"
+        <div v-else @click="displayWorkingHours" 
+          class="borderstyle hoverclickable shadow-inner text-center rounded-pill"
           :class="{ buttonClickedIn: OpenOrNot }">
             Working hours?
         </div>
         <div v-if="OpenOrNot" @click="OpenOrNot = !OpenOrNot">
-          <table style="z-index: 1;" 
-                 class="table table-striped mt-3">
+          <table class="tablestyle table table-striped mt-3">
             <thead class="shadow rounded">
               <tr>
                 <th scope="col" 
@@ -82,8 +79,7 @@
     <div>
         <img src="../assets/coffeegif.gif"
              alt="coffee gif"
-             class="container-fluid rounded-pill p-2 shadow-lg" 
-             style="max-width:450px;;z-index: 1; margin-bottom: 7%">
+             class="imgstyle container-fluid rounded-pill p-2 shadow-lg">
     </div>
     <p v-show="!showWhereToFindUs && !OpenOrNot" 
     class="display-4 d-md-none">
@@ -149,5 +145,17 @@ displayWorkingHours() {
   box-shadow: inset 1px 1px 4px rgb(0, 0, 0);
   transform: translateY(1px);
 }
+.borderstyle {
+  border-bottom: 3px solid silver
+}
 
+.tablestyle {
+  z-index: 1;
+}
+
+.imgstyle {
+  max-width:450px;
+  z-index: 1; 
+  margin-bottom: 7%
+}
 </style>

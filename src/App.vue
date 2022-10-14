@@ -1,9 +1,8 @@
 <template>
   <nav 
-  :style="[!showNavbar ? {'opacity': '.1'} : {'opacity': '1'}]" 
+    :style="[!showNavbar ? {'opacity': '.1'} : {'opacity': '1'}]" 
     :class="{ 'hidden-navbar': !showNavbar }" 
-    class="navbar navbar-light bg-white fixed-bottom mx-2 shadow-lg py-3 rounded-pill my-2 border" 
-    style="z-index: 3;">
+    class="navstyle navbar navbar-light bg-white fixed-bottom mx-2 shadow-lg py-3 rounded-pill my-2 border">
      <transition name="fade">
       <div v-if="showNavbar" 
        class="px-5 d-flex flex-row mx-auto">
@@ -110,5 +109,9 @@ nav a.router-link-exact-active {
 
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+.navstyle {
+  z-index: 3;
 }
 </style>

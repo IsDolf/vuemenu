@@ -24,9 +24,8 @@
         </button>
 
       </div>
-      <div class="d-inline-flex rounded-pill border w-100 fixed-top btn-group-lg justify-content-between" 
-          role="group" 
-          style="margin:auto">
+      <div class="divmargin d-inline-flex rounded-pill border w-100 fixed-top btn-group-lg justify-content-between" 
+          role="group">
         <div v-show="allOrChoices" 
              @click="TopliNapitciCategory">
           <button @click="selectedCategory = 'TopliNapitci'" 
@@ -63,10 +62,8 @@
           </button>
         </div>
       </div>
-      <div class="rounded-pill mt-1"
-           style="border-top: 0.1px solid silver;">
-        <p class="display-1 shadow m-1" 
-           style="border-top-right-radius: 25px;border-top-left-radius: 25px;">
+      <div class="divborderstyle rounded-pill mt-1">
+        <p class="pborder display-1 shadow m-1">
            Menu
         </p>
       </div>
@@ -75,18 +72,14 @@
   <!-- Scrollable modal -->
   <template v-for="item in filteredCategories" 
             :key="item.id">
-    <div class="modal-dialog modal-dialog-scrollable d-flex border-pill" 
-         style="border-top: 1px solid silver; border-right: 1px solid silver; border-bottom: 1px solid silver; border-left: 1px solid silver">
-      <div class="card d-flex text-center m-2" 
-           style="width: 100%;">
-          <h1 class="m-1 shadow p-3" 
-              style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;">
+    <div class="divborder modal-dialog modal-dialog-scrollable d-flex border-pill">
+      <div class="cardwidth card d-flex text-center m-2">
+          <h1 class="hborder m-1 shadow p-3">
             {{item.title}}
           </h1>
         <div class="card-body">
           <img :src="item.img" 
-               class="shadow-lg rounded-pill" 
-               style="width: 80%;max-width: 500px;border: 0.1px solid gold; border-top: 0.5px solid gold; border-right: 0.5px solid gold">
+               class="itemimage shadow-lg rounded-pill">
           <h2 class="card-text border rounded-pill m-5 shadow-lg">
            {{ item.price }} KN
           </h2>
@@ -728,20 +721,20 @@ selectedCategory: "All"}
 </script>
 
 <style>
-.hoverclickable {
-  background: #ffffff;
-  border: 1px solid rgb(216, 216, 216);
-  padding: 10px 30px;
-  border-radius: 3px;
-  cursor: pointer;
-}
+    .hoverclickable {
+      background: #ffffff;
+      border: 1px solid rgb(216, 216, 216);
+      padding: 10px 30px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
 
-.buttonClickedIn {
-  color: #272727;
-  text-shadow: -1px -1px 0px rgb(255, 255, 255), -1px -1px 0px rgb(255, 255, 255);
-  box-shadow: inset 1px 1px 4px rgb(0, 0, 0);
-  transform: translateY(1px);
-}
+    .buttonClickedIn {
+      color: #272727;
+      text-shadow: -1px -1px 0px rgb(255, 255, 255), -1px -1px 0px rgb(255, 255, 255);
+      box-shadow: inset 1px 1px 4px rgb(0, 0, 0);
+      transform: translateY(1px);
+    }
 
     .scrollingtext {
      height: 100px;	
@@ -786,5 +779,42 @@ selectedCategory: "All"}
      -webkit-transform: translateX(-100%); /* Firefox bug fix */
      transform: translateX(-94%); 
      }
+    }
+
+    .divmargin {
+      margin:auto
+    }
+
+    .pborder {
+      border-top-right-radius: 25px;
+      border-top-left-radius: 25px;
+    }
+
+    .divborder {
+      border-top: 1px solid silver; 
+      border-right: 1px solid silver; 
+      border-bottom: 1px solid silver; 
+      border-left: 1px solid silver
+    }
+    
+    .cardwidth {
+      width: 100%;
+    }
+
+    .hborder {
+      border-bottom-left-radius: 25px; 
+      border-bottom-right-radius: 25px;
+    }
+
+    .itemimage {
+      width: 80%;
+      max-width: 500px;
+      border: 0.1px solid gold; 
+      border-top: 0.5px solid gold; 
+      border-right: 0.5px solid gold
+    }
+
+    .divborderstyle {
+      border-top: 0.1px solid silver;
     }
     </style>
