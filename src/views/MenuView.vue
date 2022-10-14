@@ -677,37 +677,37 @@ selectedCategory: "All"}
       TopliNapitciCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Warm Drinks';
-        window.scrollTo(0, 0);
+        window.scrollTo({top: 0, behavior: 'smooth'});
       },
 
       juicesCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Juices';
-        window.scrollTo(0, 0);
+        window.scrollTo({top: 0, behavior: 'smooth'});
       },
       
       sodaCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Carbonated beverages';
-        window.scrollTo(0, 0);
+        window.scrollTo({top: 0, behavior: 'smooth'});
       },
 
       beerCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Beers';
-        window.scrollTo(0, 0);
+        window.scrollTo({top: 0, behavior: 'smooth'});
       },
 
       alcoholCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Alcohol';
-        window.scrollTo(0, 0);
+        window.scrollTo({top: 0, behavior: 'smooth'});
       },
 
       mainCategory() {
         this.selectedCategory = 'All'
         this.allCategory = 'All'
-        window.scrollTo(0, 0);
+        window.scrollTo({top: 0, behavior: 'smooth'});
       },
   },
   computed: {
