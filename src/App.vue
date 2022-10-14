@@ -34,28 +34,28 @@
 
 <script>
   export default {
-    data(){
+   data(){
       return {
         aquariusLogoIsClicked: false,
         showNavbar: true,
         lastScrollPosition: 0,
         scrollValue: 0,
       }
-    },
-    mounted () {
+   },
+   mounted () {
     this.lastScrollPosition = window.pageYOffset
     window.addEventListener('scroll', this.onScroll)
     const viewportMeta = document.createElement('meta')
     viewportMeta.name = 'viewport'
     viewportMeta.content = 'width=device-width, initial-scale=1'
     document.head.appendChild(viewportMeta)
-  },
+   },
 
-  beforeDestroy () {
+   beforeDestroy () {
     window.removeEventListener('scroll', this.onScroll)
-  },
-    methods: {
-      onScroll () {
+   },
+   methods: {
+    onScroll () {
         let offsetTop = pageYOffset
       if (window.pageYOffset < 0) {
         return
@@ -66,52 +66,52 @@
       this.showNavbar = window.pageYOffset < this.lastScrollPosition
       this.lastScrollPosition = window.pageYOffset
     }
-    },
+   },
   }
 </script>
 
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #05203b;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #05203b;
+  }
 
-nav {
-  padding: 30px;
-}
+  nav {
+    padding: 30px;
+  }
 
-nav a {
-  font-weight: bold;
-  color: #979797;
-}
+  nav a {
+    font-weight: bold;
+    color: #979797;
+  }
 
-nav a.router-link-exact-active {
-  color: #000000;
-}
+  nav a.router-link-exact-active {
+    color: #000000;
+  }
 
-.navbar {
-  transform: translate3d(30, 30, 30);
-  transition: 0.5s all ease-out;
-}
+  .navbar {
+    transform: translate3d(30, 30, 30);
+    transition: 0.5s all ease-out;
+  }
 
-.navbar.hidden-navbar {
-  box-shadow: none;
-  transform: translate3d(0, -100%, 0);
-}
+  .navbar.hidden-navbar {
+    box-shadow: none;
+    transform: translate3d(0, -100%, 0);
+  }
 
-.fade-enter-active, .fade-leave-active {
-  transition: 0.1s all ease-out;
-}
+  .fade-enter-active, .fade-leave-active {
+    transition: 0.1s all ease-out;
+  }
 
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
 
-.navstyle {
-  z-index: 3;
-}
+  .navstyle {
+    z-index: 3;
+  }
 </style>

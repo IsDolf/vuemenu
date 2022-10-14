@@ -132,30 +132,30 @@ displayWorkingHours() {
 </script>
 
 <style scoped>
-.hoverclickable {
-  background: #ffffff;
-  border: 1px solid rgb(216, 216, 216);
-  padding: 10px 30px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.buttonClickedIn {
-  color: #272727;
-  text-shadow: -1px -1px 0px rgb(255, 255, 255), -1px -1px 0px rgb(255, 255, 255);
-  box-shadow: inset 1px 1px 4px rgb(0, 0, 0);
-  transform: translateY(1px);
-}
-.borderstyle {
-  border-bottom: 3px solid silver
-}
+  .hoverclickable {
+    background: #ffffff;
+    border: 1px solid rgb(216, 216, 216);
+    padding: 10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .buttonClickedIn {
+    color: #272727;
+    text-shadow: -1px -1px 0px rgb(255, 255, 255), -1px -1px 0px rgb(255, 255, 255);
+    box-shadow: inset 1px 1px 4px rgb(0, 0, 0);
+    transform: translateY(1px);
+  }
+  .borderstyle {
+    border-bottom: 3px solid silver
+  }
 
-.tablestyle {
-  z-index: 1;
-}
+  .tablestyle {
+    z-index: 1;
+  }
 
-.imgstyle {
-  max-width:450px;
-  z-index: 1; 
-  margin-bottom: 7%
-}
+  .imgstyle {
+    max-width:450px;
+    z-index: 1; 
+    margin-bottom: 7%
+  }
 </style>

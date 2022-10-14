@@ -30,7 +30,7 @@
              @click="TopliNapitciCategory">
           <button @click="selectedCategory = 'TopliNapitci'" 
                   class="text-center border rounded-pill shadow-lg bg-light btn btn-lg" >
-            <fa icon="fa-coffee" />
+              <fa icon="fa-coffee" />
           </button>
         </div>
         <div v-show="allOrChoices" 
@@ -80,11 +80,11 @@
         <div class="card-body">
           <img :src="item.img" 
                class="itemimage shadow-lg rounded-pill">
-          <h2 class="card-text border rounded-pill m-5 shadow-lg">
-           {{ item.price }} KN
-          </h2>
+           <h2 class="card-text border rounded-pill m-5 shadow-lg">
+            {{ item.price }} KN
+           </h2>
           <h4 class="card-text">
-           {{ item.desc }}
+            {{ item.desc }}
           </h4>
         </div>
       </div>
