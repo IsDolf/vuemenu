@@ -56,7 +56,7 @@
    },
    methods: {
     onScroll () {
-        let offsetTop = pageYOffset
+      let offsetTop = pageYOffset
       if (window.pageYOffset < 0) {
         return
       }

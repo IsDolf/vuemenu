@@ -28,7 +28,7 @@
           role="group">
         <div v-show="allOrChoices" 
              @click="TopliNapitciCategory">
-          <button @click="selectedCategory = 'TopliNapitci'" 
+          <button @click="selectedCategory = 'TopliNapitci'"
                   class="text-center border rounded-pill shadow-lg bg-light btn btn-lg" >
               <fa icon="fa-coffee" />
           </button>
@@ -673,29 +673,35 @@
 selectedCategory: "All"}
 },
   methods: {
+    
       TopliNapitciCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Warm Drinks';
+        window.scrollTo(0, 0);
       },
 
       juicesCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Juices';
+        window.scrollTo(0, 0);
       },
       
       sodaCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Carbonated beverages';
+        window.scrollTo(0, 0);
       },
 
       beerCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Beers';
+        window.scrollTo(0, 0);
       },
 
       alcoholCategory() {
         this.allOrChoices = !this.allOrChoices;
         this.allCategory = 'Alcohol';
+        window.scrollTo(0, 0);
       },
 
       mainCategory() {
