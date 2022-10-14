@@ -86,7 +86,19 @@
     {{ quotes[0] }}
     </p>
   </div>
-  <br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
+  <p class="display-2 m-3 p-2 border rounded bg-light">News</p>
+  <div class="card text-center m-4 mt-0 rounded">
+    <h5 class="m-2 border rounded-pill">22.09.2022.</h5>
+    <h5 class="card-title bg-light p-2 mx-3 border rounded">Autumn has started!</h5>
+    <div class="border mt-0 m-3 rounded bg-light">
+  <img src="../assets/hotchocolate.jpeg" style="max-width:250px;max-height:350px" class="card-img-top img-fluid rounded-pill mx-auto d-block border m-5" alt="...">
+</div>
+  <div class="card-body">
+    <h4 class="card-text bg-light p-2 border rounded">Hot chocolate is back!</h4>
+  </div>
+</div>
+  <br>
   <button v-if="!wifiClicked" 
           @click="wifiClicked = !wifiClicked" 
           class="iconshadow rounded btn btn-lg border position-relative">
