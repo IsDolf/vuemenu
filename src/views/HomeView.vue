@@ -86,7 +86,19 @@
     {{ quotes[0] }}
     </p>
   </div>
-  <br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br>
+  <button v-if="!wifiClicked" 
+          @click="wifiClicked = !wifiClicked" 
+          class="rounded btn btn-lg border">
+          Wi-Fi
+  </button>
+  <button v-else 
+          @click="wifiClicked = !wifiClicked"
+          class="rounded btn border">
+          '12345abc'
+  </button>
+  <br><br>
+
 </template>
 <script>
 
@@ -122,6 +134,7 @@ displayWorkingHours() {
       OpenOrNot: false,
       todayDate: '',
       showingVideo: false,
+      wifiClicked: false,
       quotes: ['Life’s too short for bad coffee.','Our Coffee, Your Way.', 'A coffee lover’s coffee shop.', 'More than just coffee.','Your daily happiness.','A cup of happiness.','Coffee, Coffee, Coffee!','Coffee is forever.'],
     }
   },
