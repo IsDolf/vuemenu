@@ -19,7 +19,7 @@
            class="d-flex">
         <button :class="{ buttonClickedIn: allOrChoices }" 
                 @click="mainCategory" 
-                class="hoverclickable border rounded-pill bg-transparent d-block-flex fixed-top m-5 p-2 fw-bold">
+                class="hoverclickable rounded-pill bg-transparent d-block-flex fixed-top m-5 p-2 fw-bold">
                 {{ allCategory }}
         </button>
 
@@ -29,35 +29,35 @@
         <div v-show="allOrChoices" 
              @click="TopliNapitciCategory">
           <button @click="selectedCategory = 'TopliNapitci'"
-                  class="text-center border rounded-pill shadow-lg bg-light btn btn-lg" >
+                  class="iconshadow text-center border rounded bg-light btn btn-lg" >
               <fa icon="fa-coffee" />
           </button>
         </div>
         <div v-show="allOrChoices" 
              @click="juicesCategory">
           <button @click="selectedCategory = 'Juices'" 
-                  class="text-center border rounded shadow-lg bg-light btn btn-lg" >
-            <fa icon="fa-lemon" />
+                  class="iconshadow text-center border rounded bg-light btn btn-lg" >
+                  <fa icon="fa-lemon" />
           </button>
         </div>
         <div v-show="allOrChoices" 
              @click="sodaCategory">
           <button @click="selectedCategory = 'Soda'" 
-                  class="text-center border rounded-pill shadow-lg bg-light btn btn-lg" >
+                  class="iconshadow text-center border rounded bg-light btn btn-lg" >
             <fa icon="fa-cubes-stacked" />
           </button>
         </div>
         <div v-show="allOrChoices" 
              @click="beerCategory">
           <button @click="selectedCategory = 'Beers'" 
-                  class="text-center border rounded shadow-lg bg-light btn btn-lg" >
+                  class="iconshadow text-center border rounded bg-light btn btn-lg" >
             <fa icon="fa-beer" />
           </button>
         </div>
         <div v-show="allOrChoices" 
              @click="alcoholCategory">
           <button @click="selectedCategory = 'Alcohol'" 
-                  class="text-center border rounded-pill shadow-lg bg-light btn btn-lg" >
+                  class="iconshadow text-center border rounded bg-light btn btn-lg" >
             <fa icon="fa-wine-glass" />
           </button>
         </div>
@@ -730,7 +730,8 @@ selectedCategory: "All"}
 <style>
     .hoverclickable {
       background: #ffffff;
-      border: 1px solid rgb(216, 216, 216);
+      border: 0.5px solid black;
+      box-shadow: 0.8px 0.8px black;
       padding: 10px 30px;
       border-radius: 3px;
       cursor: pointer;
@@ -823,5 +824,9 @@ selectedCategory: "All"}
 
     .divborderstyle {
       border-top: 0.1px solid silver;
+    }
+
+    .iconshadow {
+      box-shadow: 0.8px 0.8px black;
     }
     </style>

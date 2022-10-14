@@ -7,10 +7,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faBeer, faCoffee, faCubesStacked, faLemon, faUserSecret, faWineGlass } from '@fortawesome/free-solid-svg-icons'
+import { faBeer, faCoffee, faCubesStacked, faLemon, faUserSecret, faWifi, faWineGlass } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret, faBeer, faLemon, faWineGlass, faCoffee, faCubesStacked)
+library.add(faUserSecret, faBeer, faLemon, faWineGlass, faCoffee, faCubesStacked, faWifi)
 import App from './App.vue'
 import router from './router'
 

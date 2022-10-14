@@ -2,7 +2,7 @@
   <div class="home">
     <div class="p-3 display-4 shadow">
       <p @click="showWhereToFindUs = !showWhereToFindUs"
-         class="borderstyle hoverclickable shadow-inner text-center rounded-pill"
+         class="borderstyle hoverclickable text-center rounded-pill"
          :class="{ buttonClickedIn: showWhereToFindUs }">
          Where to find us?
       </p>
@@ -89,12 +89,12 @@
   <br><br><br><br><br><br><br><br>
   <button v-if="!wifiClicked" 
           @click="wifiClicked = !wifiClicked" 
-          class="rounded btn btn-lg border">
-          Wi-Fi
+          class="iconshadow rounded btn btn-lg border position-relative">
+          <fa icon="fa-wifi" />
   </button>
   <button v-else 
           @click="wifiClicked = !wifiClicked"
-          class="rounded btn border">
+          class="iconshadow rounded btn border position-relative">
           '12345abc'
   </button>
   <br><br>
@@ -159,7 +159,10 @@ displayWorkingHours() {
     transform: translateY(1px);
   }
   .borderstyle {
-    border-bottom: 3px solid silver
+    border-top: 0.8px solid black;
+    border-left: 0.8px solid black;
+    border-right: 1.2px solid black;
+    border-bottom: 1.2px solid black;
   }
 
   .tablestyle {
@@ -170,5 +173,9 @@ displayWorkingHours() {
     max-width:450px;
     z-index: 1; 
     margin-bottom: 7%
+  }
+
+  .iconshadow {
+    box-shadow: 0.8px 0.8px black;
   }
 </style>
