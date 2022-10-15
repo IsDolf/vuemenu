@@ -227,7 +227,7 @@
     category: "Juices",
     price: 17,
     img: require("@/assets/item-13.jpeg"),
-    desc: `Freshly squeezed lemonade. 0.1l`,
+    desc: `Freshly squeezed lemonade. 0.3l`,
   },
   {
     id: 17,

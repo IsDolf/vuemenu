@@ -87,8 +87,10 @@
     </p>
   </div>
   <br><br><br><br><br><br><br>
+  <div class="border rounded mx-2 shadow-lg">
   <p class="display-2 m-3 p-2 border rounded bg-light">News</p>
-  <div class="card text-center m-4 mt-0 rounded">
+  <div class="scroll">
+    <div class="card text-center m-4 mt-0 rounded">
     <h5 class="m-2 border rounded-pill">22.09.2022.</h5>
     <h5 class="card-title bg-light p-2 mx-3 border rounded">Autumn has started!</h5>
     <div class="border mt-0 m-3 rounded bg-light">
@@ -97,6 +99,20 @@
   <div class="card-body">
     <h4 class="card-text bg-light p-2 border rounded">Hot chocolate is back!</h4>
   </div>
+</div>
+<div class="card text-center m-4 mt-0 rounded">
+    <h5 class="m-2 border rounded-pill">Info</h5>
+    <h5 class="card-title bg-light p-2 mx-3 border rounded">Rijeka Tap Water</h5>
+    <div class="border mt-0 m-3 rounded bg-light">
+<h4 class="m-2 text-center">Rated as one of the best of quality water in Croatia and under more strict
+regulations than in most EU countries, our tap water is safe, drinkable and in most cases free. Because of our constant
+water circulation, Aquarius 3000 is proud to have one of the best tap waters in the world.</h4>
+</div>
+  <div class="card-body">
+    <h4 class="card-text bg-light p-2 border rounded">Safe, drinkable, free!</h4>
+  </div>
+</div>
+</div>
 </div>
   <br>
   <button v-if="!wifiClicked" 
@@ -113,8 +129,6 @@
 
 </template>
 <script>
-
-
 
 export default {
   mounted(){
@@ -190,4 +204,9 @@ displayWorkingHours() {
   .iconshadow {
     box-shadow: 0.8px 0.8px black;
   }
+
+  .scroll {
+    max-height: 700px;
+    overflow-y: auto;
+}
 </style>
