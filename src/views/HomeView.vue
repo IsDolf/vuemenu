@@ -77,43 +77,43 @@
       </p>
     </div>
     <div>
-        <img src="../assets/coffeegif.gif"
-             alt="coffee gif"
-             class="imgstyle container-fluid rounded-pill p-2 shadow-lg">
+      <img src="../assets/coffeegif.gif"
+           alt="coffee gif"
+           class="imgstyle container-fluid rounded-pill p-2 shadow-lg">
     </div>
     <p v-show="!showWhereToFindUs && !OpenOrNot" 
-    class="display-4 d-md-none">
-    {{ quotes[0] }}
+       class="display-4 d-md-none">
+       {{ quotes[0] }}
     </p>
   </div>
   <br><br><br><br><br><br><br>
   <div class="border rounded mx-2 shadow-lg">
-  <p class="display-2 m-3 p-2 border rounded bg-light">News</p>
-  <div class="scroll">
-    <div class="card text-center m-4 mt-0 rounded">
-    <h5 class="m-2 border rounded-pill">22.09.2022.</h5>
-    <h5 class="card-title bg-light p-2 mx-3 border rounded">Autumn has started!</h5>
-    <div class="border mt-0 m-3 rounded bg-light">
-  <img src="../assets/hotchocolate.jpeg" style="max-width:250px;max-height:350px" class="card-img-top img-fluid rounded-pill mx-auto d-block border m-5" alt="...">
-</div>
-  <div class="card-body">
-    <h4 class="card-text bg-light p-2 border rounded">Hot chocolate is back!</h4>
-  </div>
-</div>
-<div class="card text-center m-4 mt-0 rounded">
-    <h5 class="m-2 border rounded-pill">Info</h5>
-    <h5 class="card-title bg-light p-2 mx-3 border rounded">Rijeka Tap Water</h5>
-    <div class="border mt-0 m-3 rounded bg-light">
-<h4 class="m-2 text-center">Rated as one of the best of quality water in Croatia and under more strict
+    <p class="display-2 m-3 p-2 border rounded bg-light">News</p>
+     <div class="scroll shadow">
+      <div class="card text-center m-4 mt-0 rounded shadow-lg">
+       <h5 class="m-2 border rounded-pill p-1">22.09.2022.</h5>
+       <h5 class="card-title bg-light p-2 mx-3 border rounded">Autumn has started!</h5>
+        <div class="border mt-0 m-3 rounded bg-light">
+          <img src="../assets/hotchocolate.jpeg" style="max-width:250px;max-height:350px" class="card-img-top img-fluid rounded-pill mx-auto d-block border m-5" alt="...">
+        </div>
+        <div class="card-body">
+         <h4 class="card-text bg-light p-2 border rounded">Hot chocolate is back!</h4>
+        </div>
+      </div>
+     <div class="card text-center m-4 mt-0 rounded shadow-lg">
+       <h5 class="m-2 border rounded-pill p-1">Info</h5>
+       <h5 class="card-title bg-light p-2 mx-3 border rounded">Rijeka Tap Water</h5>
+        <div class="border mt-0 m-3 rounded bg-light">
+        <h4 class="m-2 text-center">Rated as one of the best of quality water in Croatia and under more strict
 regulations than in most EU countries, our tap water is safe, drinkable and in most cases free. Because of our constant
 water circulation, Aquarius 3000 is proud to have one of the best tap waters in the world.</h4>
-</div>
-  <div class="card-body">
-    <h4 class="card-text bg-light p-2 border rounded">Safe, drinkable, free!</h4>
+        </div>
+      <div class="card-body">
+      <h4 class="card-text bg-light p-2 border rounded">Safe, drinkable, free!</h4>
+      </div>
+      </div>
+     </div>
   </div>
-</div>
-</div>
-</div>
   <br>
   <button v-if="!wifiClicked" 
           @click="wifiClicked = !wifiClicked" 
