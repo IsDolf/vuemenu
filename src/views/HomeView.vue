@@ -4,7 +4,7 @@
   <thead class="col-6">
     <tr v-for="drink in menu" class="col">
       <th scope="col"><p class="h4 text-start fst-italic">{{drink.title}}</p> <p class="h6 text-start">{{ drink.desc }} </p></th>            
-      <th scope="col"><p class="h4 text-center fst-italic fw-light"> {{ drink.price }} <span class="font-monospace">€</span></p></th>
+      <th scope="col"><p class="h4 text-center fst-italic fw-light text-nowrap"> {{ drink.price }} <span class="font-monospace">€</span></p></th>
     </tr>
   </thead>
 </table>
