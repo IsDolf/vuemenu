@@ -3,7 +3,7 @@
   <thead>
     <tr class="shadow-lg bg-white text-secondary">
       <th scope="col"><p class="text-start h3 mb-0 fw-bolder fst-italic">Beverages</p></th>
-      <th v-if="!eur" @click="eur = !eur" scope="col"><span class="border btn">€</span></th>
+      <th v-if="!eur" @click="eur = !eur" scope="col"><span class="border btn">EUR</span></th>
       <th v-else @click="eur = !eur" scope="col"><span class="border btn">HRK</span></th>
     </tr>
   </thead>
