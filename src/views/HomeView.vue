@@ -23,7 +23,7 @@
     export default {
         data() {
             return {
-              eur: false,
+              eur: true,
               menu: [
   {
     id: 1,
