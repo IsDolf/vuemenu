@@ -1,20 +1,29 @@
 <template>
-  <br>
   <table class="table">
-  <thead class="col-6">
-    <tr v-for="drink in menu" class="col">
-      <th scope="col"><p class="h4 text-start fst-italic">{{drink.title}}</p> <p class="h6 text-start">{{ drink.desc }} </p></th>            
-      <th scope="col"><p class="h4 text-center fst-italic fw-light text-nowrap"> {{ drink.price }} <span class="font-monospace">€</span></p></th>
+  <thead>
+    <tr class="shadow-lg bg-white text-secondary">
+      <th scope="col"><p class="text-start h3 mb-0 fw-bolder fst-italic">Beverages</p></th>
+      <th v-if="!eur" @click="eur = !eur" scope="col"><span class="border btn">€</span></th>
+      <th v-else @click="eur = !eur" scope="col"><span class="border btn">HRK</span></th>
     </tr>
   </thead>
+  <tbody>
+    <tr v-for="drink in menu">
+      <td scope="col"><p class="h4 text-start fst-italic">{{drink.title}}</p><p class="h6 text-start">{{ drink.desc }} </p></td>
+      <td v-if="eur"><p class="h4 text-center fst-italic fw-light text-nowrap"> {{ drink.price }} <span class="font-monospace">€</span></p></td>
+      <td v-else><p class="h4 text-center fst-italic fw-light text-nowrap"> {{ Math.round((drink.price * 7.53450) * 10)/10 }} <span class="font-monospace">HRK</span></p></td>
+    </tr>
+  </tbody>
 </table>
 <br>
+<footer class="bg-white fixed-bottom shadow-lg">Wi-Fi - AQUARIUS - 12345abc</footer>
 </template>
 
 <script>
     export default {
         data() {
             return {
+              eur: false,
               menu: [
   {
     id: 1,
