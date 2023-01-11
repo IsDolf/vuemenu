@@ -16,7 +16,7 @@
   </tbody>
 </table>
 <br>
-<footer class="bg-white fixed-bottom shadow-lg fst-italic">Wi-Fi Password - 12345abc</footer>
+<footer class="bg-white fixed-bottom shadow-lg fst-italic pt-1 fw-bold"><span v-if="!showLocation">Wi-Fi Password - 12345abc</span><span v-else>Prolaz Marije Krucifikse Kozulić 4</span><img @click="showLocation = true" class="fixed-bottom m-1 mx-3 rounded" :class="showLocation ? 'border border-info' : ''" src="../assets/iconlocation.png" alt="Location" width="20"><img @click="showLocation = false" class="fixed-bottom mx-5 m-1 rounded" :class="showLocation ? '' : 'border border-info'" src="../assets/wifiicon.jpeg" alt="wifi" width="20"></footer>
 </template>
 
 <script>
@@ -24,6 +24,7 @@
         data() {
             return {
               eur: true,
+              showLocation: false,
               menu: [
   {
     id: 1,
