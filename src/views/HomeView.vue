@@ -16,7 +16,7 @@
   </tbody>
 </table>
 <br>
-<footer class="bg-white fixed-bottom shadow-lg">Wi-Fi - AQUARIUS - 12345abc</footer>
+<footer class="bg-white fixed-bottom shadow-lg fst-italic">Wi-Fi Password - 12345abc</footer>
 </template>
 
 <script>
