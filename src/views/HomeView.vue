@@ -16,7 +16,10 @@
   </tbody>
 </table>
 <br>
-<footer class="bg-white fixed-bottom shadow-lg fst-italic pt-1 fw-bold"><span v-if="!showLocation">Wi-Fi Password - 12345abc</span><span v-else>Prolaz Marije Krucifikse Kozulić 4</span><img @click="showLocation = true" class="fixed-bottom m-1 mx-3 rounded" :class="showLocation ? 'border border-info' : ''" src="../assets/iconlocation.png" alt="Location" width="20"><img @click="showLocation = false" class="fixed-bottom mx-5 m-1 rounded" :class="showLocation ? '' : 'border border-info'" src="../assets/wifiicon.jpeg" alt="wifi" width="20"></footer>
+<transition name="bounce">
+<footer key="1" v-if="showPassword" class="fixed-bottom shadow-lg border-top border-secondary fst-italic pt-1 fw-bold rounded-bottom rounded-pill bg-white"><span>Password - 12345abc</span><img @click="showPassword = !showPassword" class="fixed-bottom mx-3 m-1 rounded" src="../assets/wifiicon.jpeg" alt="wifi" width="20"></footer>
+<img key="2" @click="showPassword = !showPassword" v-else class="fixed-bottom m-auto rounded-pill btn bg-white border-secondary mb-1" src="../assets/wifiicon.jpeg" alt="wifi" width="50">
+</transition>
 </template>
 
 <script>
@@ -24,7 +27,7 @@
         data() {
             return {
               eur: true,
-              showLocation: false,
+              showPassword: false,
               menu: [
   {
     id: 1,
@@ -605,4 +608,19 @@
 };
 </script>
 
-<style></style>
+<style>
+.bounce-enter-active {
+  animation: bounce-in 0.7s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style>
